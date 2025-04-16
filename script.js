@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   createBalloons();
 
   // Create confetti
-  createConfetti();
 
   // Create stars
   createStars();
