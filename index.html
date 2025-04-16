@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Celebration!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="music-control">
+        <button id="music-toggle">
+            <span class="music-icon">🎵</span>
+            <span class="music-text">Play Music</span>
+        </button>
+        <audio id="birthday-music" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div id="particles-js"></div>
+    <div class="container">
+        <div id="confetti-container"></div>
+        <div id="stars-container"></div>
+        
+        <header class="birthday-header">
+            <h1 class="title">Happy Birthday!</h1>
+            <h2 class="subtitle">To My Amazing Friend</h2>
+        </header>
+
+        <!-- Timer Section -->
+        <section class="timer-section">
+            <h2 class="timer-title">This world is lucky since...</h2>
+            <div class="timer-container">
+                <div class="timer-unit">
+                    <span id="years">0</span>
+                    <span class="timer-label">Years</span>
+                </div>
+                <div class="timer-unit">
+                    <span id="months">0</span>
+                    <span class="timer-label">Months</span>
+                </div>
+                <div class="timer-unit">
+                    <span id="days">0</span>
+                    <span class="timer-label">Days</span>
+                </div>
+                <div class="timer-unit">
+                    <span id="hours">0</span>
+                    <span class="timer-label">Hours</span>
+                </div>
+                <div class="timer-unit">
+                    <span id="minutes">0</span>
+                    <span class="timer-label">Minutes</span>
+                </div>
+                <div class="timer-unit">
+                    <span id="seconds">0</span>
+                    <span class="timer-label">Seconds</span>
+                </div>
+            </div>
+            <p class="birthday-date">April 19, 2008</p>
+        </section>
+
+        <section class="birthday-message">
+            <div class="message-card">
+                <p>On this special day, I want to celebrate you and all the joy you bring to my life. Your friendship means the world to me, and I'm so grateful to have you in my life.</p>
+                <p>Wishing you a day filled with laughter, love, and unforgettable moments!</p>
+                <p class="signature">With love,<br>Your Friend</p>
+            </div>
+        </section>
+
+        <!-- New Greeting Cards Section -->
+        <section class="greeting-cards-section">
+            <h2>A small request</h2>
+            <div class="greeting-cards-container">
+                <div class="greeting-card" id="greeting-card-2">
+                    <div class="greeting-card-inner">
+                        <div class="greeting-card-front">
+                            <div class="card-decoration"></div>
+                            <h3>Click to Open</h3>
+                            <div class="envelope-flap"></div>
+                        </div>
+                        <div class="greeting-card-back">
+                            <p>I planned a cake cutting ceremony at Akshay Restaurant. Will you come? Please say yes!</p>
+                            <button class="response-btn" id="accept-btn">Yes, I'll come</button>
+                            <button class="response-btn" id="decline-btn">Sorry, can't make it</button>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Cake Section -->
+        <section class="cake-section">
+            <div class="scene">
+                <div class="cake">
+                    <div class="cake-base"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-top"></div>
+                    <div class="candle" id="candle1">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" id="candle2">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" id="candle3">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="cake-shadow"></div>
+                </div>
+            </div>
+            <p class="cake-text">Make a wish and click the candles!</p>
+            <button id="rotate-cake" class="cake-control-btn">Rotate Cake</button>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Memories Together</h2>
+            <div class="gallery-container">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Memory 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Memory 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Memory 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Memory 4">
+                    </div>
+                </div>
+                <div class="gallery-nav">
+                    <button id="prev-btn">Previous</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="wishes-section">
+            <h2>Birthday Wishes</h2>
+            <div class="wishes-container">
+                <div class="wish">
+                    <p>"May your day be as bright as your smile and as beautiful as your heart."</p>
+                    <div class="wish-sparkles"></div>
+                </div>
+                <div class="wish">
+                    <p>"Here's to another year of laughter, joy, and unforgettable memories!"</p>
+                    <div class="wish-sparkles"></div>
+                </div>
+                <div class="wish">
+                    <p>"Wishing you a day filled with happiness and a year filled with joy."</p>
+                    <div class="wish-sparkles"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Gift Section -->
+        <section class="gift-section">
+            <h2>Your Birthday Gifts</h2>
+            <div class="gifts-container">
+                <div class="gift-box" data-message="Wishing you all the happiness in the world!">
+                    <div class="gift-lid"></div>
+                    <div class="gift-box-body"></div>
+                    <div class="gift-ribbon"></div>
+                    <div class="gift-bow"></div>
+                </div>
+                <div class="gift-box" data-message="May all your dreams come true this year!">
+                    <div class="gift-lid"></div>
+                    <div class="gift-box-body"></div>
+                    <div class="gift-ribbon"></div>
+                    <div class="gift-bow"></div>
+                </div>
+                <div class="gift-box" data-message="You deserve all the best things in life!">
+                    <div class="gift-lid"></div>
+                    <div class="gift-box-body"></div>
+                    <div class="gift-ribbon"></div>
+                    <div class="gift-bow"></div>
+                </div>
+            </div>
+            <p class="gift-instruction">Click on a gift to open it!</p>
+        </section>
+
+
+        <div id="balloon-container"></div>
+    </div>
+
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ for your special day</p>
+        <div class="sparkles"></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
